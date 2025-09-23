@@ -1,0 +1,16 @@
+.youngMatador {
+    width: 240px;
+    height: 190px;
+    background-image: url(/public/bullfighter.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.oldMatador {
+    width: 240px;
+    height: 190px;
+    background-image: url(/public/bullfighterOld.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}

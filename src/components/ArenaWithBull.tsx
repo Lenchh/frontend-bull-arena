@@ -7,7 +7,7 @@ interface ArenaWithBullProps {
 
 const ArenaWithBull = ({ matador }: ArenaWithBullProps) => {
     const [applause, setApplause] = useState(0);
-    const [screemJoy, setScreamJoy] = useState(0);
+    const [screamJoy, setScreamJoy] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
     const [matadorPosition, setMatarodPosition] = useState(4);
     const [bullPosition, setBullPosition] = useState(8);
@@ -24,7 +24,7 @@ const ArenaWithBull = ({ matador }: ArenaWithBullProps) => {
         }, 800);
         // respond to custom Events
         const dispatchRunInterval = setInterval(() => {
-            const position = Math.floor(Math.random() * 8)
+            const position = Math.floor(Math.random() * 9)
             const BullRun = new CustomEvent('bullRun', {
                 detail: {
                     position
