@@ -28,7 +28,7 @@ class OldMatador extends React.Component<matadorProps> {
     }
     componentDidUpdate(prevProps: matadorProps) {
        if (prevProps.applause !== this.props.applause) {
-            const audioObj = new Audio(`/src/assets/applause${this.props.applause}.mp3`);
+            const audioObj = new Audio(`/src/assets/applause${prevProps.applause}.mp3`);
             audioObj.play(); 
         }
     }
