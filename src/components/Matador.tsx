@@ -23,6 +23,12 @@ useEffect(() => {
     document.removeEventListener("bullRun", handler);
   };
 }, []);
+
+useEffect(() => {
+    const audioObj = new Audio(`/src/assets/applause${applause}.mp3`);
+    audioObj.play(); 
+}, [applause]);
+
     return <div className="youngMatador"></div>
 } 
 

@@ -26,6 +26,12 @@ class OldMatador extends React.Component<matadorProps> {
     componentWillUnmount() {
         document.removeEventListener("bullRun", this.handler);
     }
+    componentDidUpdate(prevProps: matadorProps) {
+       if (prevProps.applause !== this.props.applause) {
+            const audioObj = new Audio(`/src/assets/applause${this.props.applause}.mp3`);
+            audioObj.play(); 
+        }
+    }
     render() {
         return <div className="oldMatador"></div>;
     }
